@@ -1,0 +1,19 @@
+version: '2'
+networks:
+  newsservice_frontend:
+    external: true
+
+services:
+    webapp:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: web2
+        ports:
+            - "8088:6001"
+        
+        networks:
+            newsservice_frontend:
+                ipv4_address: 172.20.0.7        
+        
+        
