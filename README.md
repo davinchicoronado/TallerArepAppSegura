@@ -38,18 +38,15 @@ Del lado del cliente se tiene el proyecto LoginService y tiene una clase llamada
 
 Por otro lado se tiene el proyecto NewsService que proporciona una noticia actual, con la clase ServerNews la cual tiene peticiones http de lado del servidor pero estas peticiones al igual que LoginAppClient estan cifradas, este proyecto contiene una llave y como anteriormente se describia el otro proyecto tiene el certificado de esta llave. Permitiendo asi tener garantizado  autenticación, autorización e integridad entre los servicios.
 
+La siguiente imagen muestra una arquitectura de seguridad del sistema desarrollado.
 
-
-
-
-
-
-
-
-
+Arquitectura
 
 ## Despliegue Aws
 
+Realizando el mismo proceso del taller anterior, como crear la maquina Aws , abrir un puerto, subir las imagenes que están en docker hub, crear una red y unos contenedores, adicionalmente toca crear un par de llaves con su respectivo certificado para la maquina Aws estos fueron los resultados.
+
+Despliegue 
 
 
 ## CircleCi
