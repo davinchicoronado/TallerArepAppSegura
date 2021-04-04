@@ -13,6 +13,7 @@ hs_err_pid*
 ## Maven
 ##############################
 target/
+Llaves/
 keyAws/ 
 Talle/awsprimer/
 pom.xml.tag

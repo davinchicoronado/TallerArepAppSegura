@@ -24,7 +24,7 @@ public class ServerNews {
         secure("keyscerts/ecikeystorenews.p12","123456",null,null );
         port(getPort());     
         get("/queryNews", (req, res) -> queryNews(req, res));
-        get("/hello", (req, res) -> "Hello World Mama");
+      
   
     }
 
