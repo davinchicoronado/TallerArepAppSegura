@@ -12,10 +12,6 @@ jobs:
           name: TestLogService
           command: |
             git clone https://github.com/davinchicoronado/TallerArepAppSegura.git 
-            cd  TALLER-DE-DE-MODULARIZACI-N-CON-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS/Tarea/LogService
-            echo $(pwd)
-            cd /home/
-            echo $(pwd)
       
 workflows:
   maven_test:
