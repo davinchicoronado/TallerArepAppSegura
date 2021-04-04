@@ -18,19 +18,21 @@ git clone https://github.com/davinchicoronado/TallerArepAppSegura.git
 (Opcional) Para ejecutar los proyectos localmente, utilizando la herramienta Maven, nos dirigimos al directorios donde se encuentran alojados los proyectos, y dentro de estos ejecutamos en un Shell o Símbolo del Sistema los siguientes comandos:
 
 ```
-mvn exec:java -Dexec.mainClass="edu.escuelaing.arem.app.SparkWebApp"
-mvn exec:java  -Dexec.mainClass="edu.escuelaing.arem.api.SparkWebApi" 
+mvn exec:java -Dexec.mainClass="edu.escuelaing.arem.app.LoginAppClient"
+mvn exec:java  -Dexec.mainClass="edu.escuelaing.arem.app.ServerNews" 
 ```
 Luego con el siguiente comando, en cada una de los shells de los proyectos crearemos las imagenes, y los containers haciendo referencia a estas, ademas de crear una red privada con una dirección ip para cada container, permitiendo la comunicación entre ellos. En estos contenedores se encontraran los proyectos desplegados(En los archivos docker-composey Dockerfile se puede ver con mas detalle como fueron asignadas estas direcciones y ademas de como agregar las llaves y certificados, ya que en el codigo se hacen referencias de estas, y poder permitir compilar los proyectos en los containers).
 ```
 docker-compose up -d
 ```
 
-addKeycerts
+<p align="center">
+    <img src="https://github.com/davinchicoronado/TallerArepAppSegura/blob/master/Img/addKeycerts.png?raw=true" alt="Sublime's custom image"/>
 
 Para probar el proyecto localmente se deben cambiar las urls en el codigo y cambiar las llaves y los certificados debidamente. El archivo llaves los contiene para cada caso en especifico.
 
-llaves 
+<p align="center">
+    <img src="https://github.com/davinchicoronado/TallerArepAppSegura/blob/master/Img/llaves.png?raw=true" alt="Sublime's custom image"/>
 
 ## Implementación
 
@@ -40,17 +42,27 @@ Por otro lado se tiene el proyecto NewsService que proporciona una noticia actua
 
 La siguiente imagen muestra una arquitectura de seguridad del sistema desarrollado.
 
-Arquitectura
+
+<p align="center">
+    <img src="https://github.com/davinchicoronado/TallerArepAppSegura/blob/master/Img/arquitectura.png?raw=true" alt="Sublime's custom image"/>
 
 ## Despliegue Aws
 
 Realizando el mismo proceso del taller anterior, como crear la maquina Aws , abrir un puerto, subir las imagenes que están en docker hub, crear una red y unos contenedores, adicionalmente toca crear un par de llaves con su respectivo certificado para la maquina Aws estos fueron los resultados.
-
-Despliegue 
-
+<p align="center">
+    <img src="https://github.com/davinchicoronado/TallerArepAppSegura/blob/master/Img/despliegue1https.png?raw=true" alt="Sublime's custom image"/>
+ 
+ Luego con una petición http 
+ <p align="center">
+    <img src="https://github.com/davinchicoronado/TallerArepAppSegura/blob/master/Img/despliegue1http.png?raw=true" alt="Sublime's custom image"/>
+ 
+ Finalmente 
+ 
+ <p align="center">
+    <img src="https://github.com/davinchicoronado/TallerArepAppSegura/blob/master/Img/despliegue2https.png?raw=true" alt="Sublime's custom image"/>
 
 ## CircleCi
-
+[![davinchicoronado](https://circleci.com/github/davinchicoronado/TallerArepAppSegura.svg?style=svg)](https://app.circleci.com/pipelines/github/davinchicoronado/TallerArepAppSegura)
  ## Javadoc
  Para generar el javadoc de los proyectos se deberan ubicar en sus correspondientes directorios en un shell y ejecutar el siguiente comando.
  
@@ -58,6 +70,8 @@ Despliegue
 mvn javadoc:javadoc
 ```
 Tambien podrá encontrar la documentación en el directorio target/site/apidocs.
+## Link del video
+https://youtu.be/FUFubT9l1EQ
 
 ## Autor 
 David Leonardo Coronado
