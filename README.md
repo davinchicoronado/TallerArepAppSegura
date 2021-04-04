@@ -70,6 +70,8 @@ Realizando el mismo proceso del taller anterior, como crear la maquina Aws , abr
 mvn javadoc:javadoc
 ```
 Tambien podrá encontrar la documentación en el directorio target/site/apidocs.
+## Link del video
+https://youtu.be/FUFubT9l1EQ
 
 ## Autor 
 David Leonardo Coronado
