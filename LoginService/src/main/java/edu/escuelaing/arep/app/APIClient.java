@@ -35,6 +35,12 @@ public class APIClient {
     private String url2 = "https://172.20.0.5:6000";
     private static HashMap<String, String> users = new HashMap<>();
     
+     /**
+     * Constructor para APIClient
+     *
+     * 
+     */
+    
     
     public APIClient() {
         users.put("admin",encodePassword("admin"));
@@ -50,6 +56,11 @@ public class APIClient {
                 return false;
             }
     }
+    
+     /**
+     * Realiza una peticion http get a otro server  
+     * @return noticia del dia.
+     */
     
     public String getNews(){
         try {
@@ -77,11 +88,22 @@ public class APIClient {
                 + "</html>";
     }
     
+        /**
+     * Codifica una contraseña con una funcion Hash.
+     *
+     * @param password a codificar.
+     * @return password encriptado.
+     */
     private String encodePassword(String password){
     
         return Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
    
     }
+      /**
+     * Permite revisar si la conexion es segura o no dado un certificado  
+     * permitiendo asi realizar peticiones http
+     */
+    
     
     private void secureApiClient(){
         try {

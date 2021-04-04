@@ -25,8 +25,15 @@ public class ServerNews {
         port(getPort());     
         get("/queryNews", (req, res) -> queryNews(req, res));
       
-  
+        
     }
+      /**
+     * Retorna una pagina web con una noticia
+     *
+     * @param request  The HTTP Request.
+     * @param response The HTTP Response.
+     * @return pagina web con Noticia.
+     */
 
     private static String queryNews(Request req, Response res){
         
@@ -53,10 +60,13 @@ public class ServerNews {
         return pageContent;
     }
     
-
+    /**
+     * Obtiene el puerto de la aplicacion web
+     *
+     * @return El valor del puerto configurado en el sisteman, retorna 4568 por defecto
+     */
     
-    
-     
+ 
     public static int getPort() {
             if (System.getenv("PORT") != null) {
                     return Integer.parseInt(System.getenv("PORT"));

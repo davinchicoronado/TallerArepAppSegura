@@ -15,6 +15,7 @@ import spark.Response;
 
 public class LoginAppClient {
     
+
         
         private static final APIClient api = new APIClient();
         
@@ -27,6 +28,14 @@ public class LoginAppClient {
         get("/result", (req, res) -> serviceNews(req, res));
        
     }
+      /**
+     * Returns La pagina inicial.
+     *
+     * @param request  The HTTP Request.
+     * @param response The HTTP Response.
+     * @return pagina web con login.
+     */
+    
         
     private static String inputDataPage(Request req, Response res) {
         
@@ -51,6 +60,13 @@ public class LoginAppClient {
                 + "</html>";
         return pageContent;
     }  
+      /**
+     * Valida si los datos del usuario son autenticos y si es el caso retorna una pagina web 
+     *
+     * @param request  The HTTP Request.
+     * @param response The HTTP Response.
+     * @return pagina web con Noticia.
+     */
     
     private static String serviceNews(Request req, Response res){
         
@@ -77,6 +93,11 @@ public class LoginAppClient {
             return pageContent;
          
     }     
+     /**
+     * Obtiene el puerto de la aplicacion web
+     *
+     * @return El valor del puerto configurado en el sisteman, retorna 4567 por defecto
+     */
     public static int getPort() {
             if (System.getenv("PORT") != null) {
                     return Integer.parseInt(System.getenv("PORT"));
