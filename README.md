@@ -62,7 +62,7 @@ Realizando el mismo proceso del taller anterior, como crear la maquina Aws , abr
     <img src="https://github.com/davinchicoronado/TallerArepAppSegura/blob/master/Img/despliegue2https.png?raw=true" alt="Sublime's custom image"/>
 
 ## CircleCi
-[![<ORG_NAME>](https://circleci.com/github/davinchicoronado/TallerArepAppSegura.svg?style=svg)](https://app.circleci.com/pipelines/github/davinchicoronado/TallerArepAppSegura)
+[![davinchicoronado](https://circleci.com/github/davinchicoronado/TallerArepAppSegura.svg?style=svg)](https://app.circleci.com/pipelines/github/davinchicoronado/TallerArepAppSegura)
  ## Javadoc
  Para generar el javadoc de los proyectos se deberan ubicar en sus correspondientes directorios en un shell y ejecutar el siguiente comando.
  
